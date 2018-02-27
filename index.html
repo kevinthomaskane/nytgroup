@@ -10,6 +10,7 @@
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="app.js"></script>
 </head>
@@ -32,10 +33,18 @@
         </div>
         <form>
             <h3>Number Records to Retrieve</h3>
-            <div class="form-group">
-                <label for="Records to Retrieve"></label>
-                <input type="Number of Records" class="form-control" id="Records " placeholder="Number of Records">
-            </div>
+            <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span id="numberTitle">Number of Articles</span>
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a class="number" href="#">1</a></li>
+                      <li><a class="number"href="#">5</a></li>
+                      <li><a class="number"href="#">10</a></li>
+                      <li role="separator" class="divider"></li>
+                    </ul>
+                  </div>
         </form>
             <form>
                 <h3>Start Year (Optinal)</h3>
@@ -51,7 +60,7 @@
                         <input type="Year" class="form-control" id="endYear" placeholder="Year">
                     </div>
                 </form>
-                    <button class="btn btn-default" type="Search">Search</button>
+                    <button class="btn btn-default" type="Search" id="submit">Search</button>
                     <button class="btn btn-default" type="Clear">Clear Search</button>
 
                     <br>
@@ -63,7 +72,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">Top Articles</h3>
                         </div>
-                        <div class="panel-body">
+                        <div class="panel-body main-body">
                         </div>
                     </div>
 
