@@ -1,1 +1,1 @@
-function searchNYT
+function search
