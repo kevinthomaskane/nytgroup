@@ -9,7 +9,9 @@ $.ajax({
     url: nytUrl
 }).done(function (data) {
     console.log(data);
+for (let i=0; i<numberOfArticles; i++ ) {
 
+}   
 
 
 })
@@ -29,6 +31,14 @@ $("button").click(function () {
 
 $("dropdown").click(function(){
     numberOfArticles = parseInt($(this).html());
+})
+
+$("#clear").click(function(){
+    $("#search").val("") 
+    $("#beginYear").val('')
+    $("#endYear").val('')
+    numberOfArticles;
+    
 })
 
 search("trump")
